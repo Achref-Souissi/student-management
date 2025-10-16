@@ -20,14 +20,13 @@ spec:
           image: sonarqube:latest
           ports:
             - containerPort: 9000
-       resources:
-  requests:
-    memory: "2Gi"
-    cpu: "1"
-  limits:
-    memory: "3Gi"
-    cpu: "2"
-
+          resources:
+            requests:
+              memory: "2Gi"
+              cpu: "1"
+            limits:
+              memory: "3Gi"
+              cpu: "2"
           env:
             - name: SONAR_ES_BOOTSTRAP_CHECKS_DISABLE
               value: "true"   # permet le démarrage sans ElasticSearch tuning
